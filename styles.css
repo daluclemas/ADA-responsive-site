@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  width: 100%;
+}
+
+.col {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.container h1 {
+  width: 100%;
+  text-transform: capitalize;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.photo-grid-wrapper {
+  width: 90%;
+  margin: 20px auto;
+  border: 2px hidden blue;
+}
+
+.photo-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 450px;
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.story-plot {
+  display: none;
+}
+
+.spiderman {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .col {
+    margin-bottom: 0;
+  }
+
+  .col-5 {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .col-5 {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .col-1 {
+    grid-row: 1 / span 4;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid grey;
+  }
+
+  .col-3 {
+    grid-row: 1 / span 4;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid grey;
+  }
+
+  .col-2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  .col-4 {
+    grid-row: 3 / span 2;
+  }
+
+  .col-5 {
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    border-top: 2px solid grey;
+  }
+
+  .story-plot {
+    display: block;
+    margin-top: 40px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .story-plot h3 {
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+    text-transform: capitalize;
+    font-size: 24px;
+  }
+
+  .story-plot p {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 18px;
+  }
+
+  .image-wrapper {
+    height: 600px;
+  }
+
+  .col-5-wrap {
+    /* width: 350px; */
+    width: 100%;
+  }
+
+  .col-5story {
+    /* width: 350px; */
+    width: 100%;
+    border: 2px hidden green;
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .spiderman {
+    display: block;
+    /* width: 350px; */
+    width: 100%;
+    height: 600px;
+  }
+
+  .spiderman img {
+    width: 100%;
+    height: 100%;
+  }
+}
